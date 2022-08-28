@@ -1,0 +1,37 @@
+.header {
+  border-bottom: 1px solid $dark;
+}
+
+.logo {
+  @media(max-width:992px) {
+    max-width: 85px;
+  }
+}
+
+.m-search {
+  margin-left: 108px;
+}
+
+.header .nav-item {
+  border-left: 1px solid $dark;
+
+  @media(max-width:992px) {
+    width: 100%;
+    border-left: none;
+
+    &:nth-child(2) {
+      border-bottom: 1px solid $dark;
+    }
+  }
+}
+
+.btn-wallet {
+  @media(max-width:992px) {
+    background-color: $primary;
+    border: 1px solid $dark !important;
+
+    p {
+      color: $light;
+    }
+  }
+}

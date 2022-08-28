@@ -1,61 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title><%- title %></title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
-    <link rel="stylesheet" href="./assets/style/all.css">
-  </head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>
+    <%- title %>
+  </title>
+  <link rel="shortcut icon" href="./assets/images/shortcut icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&family=Paytone+One&family=Squada+One&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
+  <link rel="stylesheet" href="./assets/style/all.css">
+</head>
 
-  <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Dropdown
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-            </li>
-          </ul>
-          <form class="d-flex">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
-          </form>
+<body>
+  <header class="header">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-light py-3 py-lg-0">
+        <div class="container-fluid px-0">
+          <a class="logo navbar-brand py-0" href="#"><img src="./assets/images/logo.svg" alt="logo">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <i class="fas fa-bars navbar-toggler-icon mt-1"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-1 mb-lg-0 align-items-center">
+              <li class="nav-item d-none d-lg-block">
+                <a class="nav-link px-7 py-6 d-flex align-items-center justify-content-between" href="#">
+                  <p class="link-success text-nowrap">搜尋作品名稱、藝術家名稱</p>
+                  <i class="fas fa-search fs-3 m-search"></i>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link px-7 py-4 py-lg-6 fw-bold active text-nowrap text-center text-lg-start"
+                  href="#">探索</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link px-7 py-4 py-lg-6 fw-bold text-nowrap text-center text-lg-start" href="#">市值</a>
+              </li>
+              <li class="nav-item btn-wallet">
+                <a class="nav-link pe-lg-0 py-2 py-lg-6 px-7 ps-lg-7" href="#"><i
+                    class="fas fa-wallet fs-3 d-none d-lg-block"></i>
+                  <p class="d-lg-none fw-bold text-center text-lg-start">連結錢包</p>
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
+      </nav>
+    </div>
+  </header>
+
+
+  <%- contents %>
+
+    <footer class="footer position-relative">
+      <div class="footer-border container-fluid border-top border-dark border-4">
+        <p class="text-center py-4">© ART NFT. All Rights Reserved</p>
       </div>
-    </nav>
-
-    <%- contents %>
-
-    <footer class="footer">
-      footer
     </footer>
 
     <script src="./assets/js/vendors.js"></script>
     <script src="./assets/js/all.js"></script>
-  </body>
+</body>
 
 </html>
