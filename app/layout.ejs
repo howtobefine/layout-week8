@@ -15,32 +15,37 @@
     href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&family=Paytone+One&family=Squada+One&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
-  <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css">    
+  <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css">
   <link rel="stylesheet" href="./assets/style/all.css">
 </head>
 
 <body>
   <header class="header">
     <div class="container">
-      <nav class="navbar navbar-expand-lg navbar-light py-3 py-lg-0">
+      <nav class="navbar navbar-expand-lg navbar-light py-0">
         <div class="container-fluid px-0">
           <a class="logo navbar-brand py-0" href="#"><img src="./assets/images/logo.svg" alt="logo">
           </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-            aria-label="Toggle navigation">
-            <i class="fas fa-bars navbar-toggler-icon mt-1"></i>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <div class="navbar-icon d-flex align-items-center">
+            <button class="search navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSearch"
+              aria-controls="navbarSearch" aria-expanded="false" aria-label="Toggle navigation">
+              <i class="fas fa-search"></i>
+            </button>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarListContent"
+              aria-controls="navbarListContent" aria-expanded="false" aria-label="Toggle navigation">
+              <i class="fas fa-bars navbar-toggler-icon mt-2"></i>
+            </button>
+          </div>
+          <div class="collapse navbar-collapse" id="navbarListContent">
             <ul class="navbar-nav ms-auto mb-1 mb-lg-0 align-items-center">
               <li class="nav-item d-none d-lg-block">
-                <a class="nav-link px-7 py-6 d-flex align-items-center justify-content-between" href="#">
-                  <p class="link-success text-nowrap">搜尋作品名稱、藝術家名稱</p>
-                  <i class="fas fa-search fs-3 m-search"></i>
-                </a>
+                <div class="input-group">
+                  <input type="text" class="form-control bg-info border-0 py-6 px-7" placeholder="搜尋作品名稱、藝術家名稱">
+                  <a href="#" class="input-group-text bg-info border-0 ps-4 pe-7"><i class="fas fa-search fs-3"></i></a>
+                </div>
               </li>
               <li class="nav-item">
-                <a class="nav-link px-7 py-4 py-lg-6 fw-bold active text-nowrap text-center text-lg-start"
+                <a class="nav-link px-7 py-4 py-lg-6 fw-bold text-nowrap text-center text-lg-start"
                   href="#">探索</a>
               </li>
               <li class="nav-item">
@@ -53,6 +58,13 @@
                 </a>
               </li>
             </ul>
+          </div>
+          <div class="collapse w-100" id="navbarSearch">
+            <div class="input-group">
+              <a href="#" class="back input-group-text bg-info border-0"><i class="fas fa-chevron-left"></i></a>
+              <input type="text" class="form-control bg-info border-0 py-3" placeholder="搜尋作品名稱、藝術家名稱">
+              <a href="#" class="input-group-text bg-info border-0"><i class="fas fa-search fs-3"></i></a>
+            </div>
           </div>
         </div>
       </nav>
