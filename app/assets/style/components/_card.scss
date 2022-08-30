@@ -1,0 +1,23 @@
+.card-body-filter {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba($color: #000000, $alpha: 0.7);
+    opacity: 0;
+    transition: opacity .15s ease-in-out;
+}
+
+.card-body {
+    padding: 0;
+}
+
+.card-body:hover {
+    .card-body-filter {
+        opacity: 1;
+
+        @media(max-width:992px) {
+            opacity: 0;
+        }
+    }
+}

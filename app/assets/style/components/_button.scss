@@ -22,8 +22,19 @@
     &:hover {
         background-color: $primary;
         color: $light;
-        &::after{
+
+        &::after {
             border-color: transparent transparent $dark transparent;
         }
+    }
+}
+
+.btn-more-light {
+    background-color: $light;
+    color: $dark;
+
+    &:hover {
+        background-color: $primary;
+        color: $light;
     }
 }

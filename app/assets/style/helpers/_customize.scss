@@ -11,10 +11,22 @@
     padding-bottom: 38px;
 }
 
+.bg-light-85 {
+    background-color: rgba($color: #fff, $alpha: 0.85);
+}
+
 .text-vertical {
     writing-mode: vertical-lr;
 }
 
 .img-top {
     object-position: center top;
+}
+
+.card-border-bottom {
+    border-bottom: 2px solid $dark;
+}
+
+.position-unset {
+    position: unset;
 }
