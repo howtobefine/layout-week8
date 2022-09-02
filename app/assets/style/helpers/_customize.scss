@@ -6,9 +6,25 @@
     font-family: 'Paytone One', sans-serif;
 }
 
+.fs-sm {
+    font-size: 12px;
+}
+
 .py-38 {
     padding-top: 38px;
     padding-bottom: 38px;
+}
+
+.mb-sm {
+    margin-bottom: 4px;
+}
+
+.me-sm {
+    margin-right: 4px;
+}
+
+.ms-sm {
+    margin-left: 4px;
 }
 
 .bg-light-85 {
@@ -23,6 +39,28 @@
     object-position: center top;
 }
 
+.img-circle {
+    width: 32px;
+    height: 32px;
+    border-radius: 100%;
+}
+
+.img-circle-sm {
+    width: 24px;
+    height: 24px;
+    border-radius: 100%;
+}
+
+.img-circle-lg{
+    width: 48px;
+    height: 48px;
+    border-radius: 100%;
+}
+
 .card-border-bottom {
     border-bottom: 2px solid $dark;
+}
+
+.lh-md {
+    line-height: 1.13;
 }

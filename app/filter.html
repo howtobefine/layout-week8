@@ -1,0 +1,531 @@
+---
+title: 我家外面的鳥 | ART NFT
+layout: ./app/layout.ejs
+engine: ejs
+---
+
+<main class="position-relative">
+    <div class="container">
+        <div class="row mt-4 mt-lg-7">
+            <div class="col-lg-3 d-none d-lg-block">
+                <div class="accordion accordion-flush border border-dark" id="accordionFlushExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingOne">
+                            <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseOne" aria-expanded="false"
+                                aria-controls="flush-collapseOne">
+                                網路
+                            </button>
+                        </h2>
+                        <div id="flush-collapseOne" class="accordion-collapse collapse show"
+                            aria-labelledby="flush-headingOne">
+                            <div class="accordion-body pt-0 border-bottom border-info border-2">
+                                <div class="d-flex justify-content-between mb-1">
+                                    <label for="ether" class="form-check-label">以太坊</label>
+                                    <input type="checkbox" class="form-check-input" id="ether">
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <label for="BNB" class="form-check-label">BNB 智能鏈</label>
+                                    <input type="checkbox" class="form-check-input" id="BNB" checked>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingTwo">
+                            <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseTwo" aria-expanded="false"
+                                aria-controls="flush-collapseTwo">
+                                狀態
+                            </button>
+                        </h2>
+                        <div id="flush-collapseTwo" class="accordion-collapse collapse show"
+                            aria-labelledby="flush-headingTwo">
+                            <div class="accordion-body pt-0 border-bottom border-info border-2">
+                                <div class="d-flex justify-content-between mb-1">
+                                    <label for="display" class="form-check-label">僅展示</label>
+                                    <input type="checkbox" class="form-check-input" id="display">
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <label for="onsale" class="form-check-label">拍賣中</label>
+                                    <input type="checkbox" class="form-check-input" id="onsale" checked>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingThree">
+                            <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseThree" aria-expanded="false"
+                                aria-controls="flush-collapseThree">
+                                價格
+                            </button>
+                        </h2>
+                        <div id="flush-collapseThree" class="accordion-collapse collapse show"
+                            aria-labelledby="flush-headingThree">
+                            <div
+                                class="accordion-body pt-0 border-bottom border-info border-2 d-flex align-items-center">
+                                <select class="form-select w-28 p-1 me-1" aria-label="select">
+                                    <option selected>ETH</option>
+                                    <option value="BTC">BTC</option>
+                                    <option value="DOGE">DOGE</option>
+                                </select>
+                                <input type="text" id="lowPrice" class="form-control w-28">
+                                <span class="mx-1">－</span>
+                                <input type="text" id="highPrice" class="form-control w-28">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <p class="fw-bold text-success p-4">屬性</p>
+                        <h2 class="accordion-header" id="flush-headingFour">
+                            <button class="accordion-button collapsed fw-bold pt-0" type="button"
+                                data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false"
+                                aria-controls="flush-collapseFour">
+                                品種
+                            </button>
+                        </h2>
+                        <div id="flush-collapseFour" class="accordion-collapse collapse show"
+                            aria-labelledby="flush-headingFour">
+                            <div class="accordion-body pt-0">
+                                <div class="d-flex justify-content-between mb-1">
+                                    <label for="八哥" class="form-check-label">八哥</label>
+                                    <input type="checkbox" class="form-check-input" id="八哥">
+                                </div>
+                                <div class="d-flex justify-content-between mb-1">
+                                    <label for="虎皮鸚鵡" class="form-check-label">虎皮鸚鵡</label>
+                                    <input type="checkbox" class="form-check-input" id="虎皮鸚鵡" checked>
+                                </div>
+                                <div class="d-flex justify-content-between mb-1">
+                                    <label for="太平鳥" class="form-check-label">太平鳥</label>
+                                    <input type="checkbox" class="form-check-input" id="太平鳥">
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <label for="畫眉鳥" class="form-check-label">畫眉鳥</label>
+                                    <input type="checkbox" class="form-check-input" id="畫眉鳥">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingFive">
+                            <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseFive" aria-expanded="false"
+                                aria-controls="flush-collapseFive">
+                                鳥的數量
+                            </button>
+                        </h2>
+                        <div id="flush-collapseFive" class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body pt-0">
+                                <select class="form-select" aria-label="select">
+                                    <option selected>1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingSix">
+                            <button class="accordion-button collapsed fw-bold pt-0" type="button"
+                                data-bs-toggle="collapse" data-bs-target="#flush-collapseSix" aria-expanded="false"
+                                aria-controls="flush-collapseSix">
+                                是否有花草
+                            </button>
+                        </h2>
+                        <div id="flush-collapseSix" class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingSix" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body pt-0">
+                                <div class="d-flex justify-content-between mb-1">
+                                    <label for="isFlowerTrue" class="form-check-label">是</label>
+                                    <input type="checkbox" class="form-check-input" id="isFlowerTrue">
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <label for="isFlowerFalse" class="form-check-label">否</label>
+                                    <input type="checkbox" class="form-check-input" id="isFlowerFalse">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingSeven">
+                            <button class="accordion-button collapsed fw-bold pt-0" type="button"
+                                data-bs-toggle="collapse" data-bs-target="#flush-collapseSeven" aria-expanded="false"
+                                aria-controls="flush-collapseSeven">
+                                鳥的顏色
+                            </button>
+                        </h2>
+                        <div id="flush-collapseSeven" class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingSeven" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body pt-0">
+                                <select class="form-select" aria-label="select">
+                                    <option selected>白色</option>
+                                    <option value="black">黑色</option>
+                                    <option value="blue">藍色</option>
+                                    <option value="green">綠色</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-9">
+                <section>
+                    <div class="d-flex align-items-center mb-sm">
+                        <div class="flex-shrink-0">
+                            <img src="./assets/images/artist01.jpg" alt="artist01" class="img-circle me-3">
+                        </div>
+                        <p class="font-squada flex-grow-1">Michael</p>
+                    </div>
+                    <div class="row justify-content-between align-items-end mb-6">
+                        <div class="col-lg-7">
+                            <h2 class="fw-bold mb-1">我家外面的鳥</h2>
+                            <p>家門前每天都有不同的小鳥，大多數的小鳥都有特殊能力，特殊能力是什<br>麼我就不說了，希望大家能從作品感受到小鳥的快樂。</p>
+                        </div>
+                        <div class="col-lg-5 mt-3 mt-lg-0">
+                            <ul class="row row-cols-4 list-unstyled bg-light border border-dark d-flex">
+                                <li class="col text-center py-1 py-lg-3 border-end border-dark">
+                                    <div class="list-border-light position-relative">
+                                        <p>項目</p>
+                                        <span class="font-squada fs-3 mt-1">6.4 k</span>
+                                    </div>
+                                </li>
+                                <li class="col text-center py-1 py-lg-3 border-end border-dark">
+                                    <div class="list-border-light position-relative">
+                                        <p>擁有者</p><span class="font-squada fs-3 mt-1">2.5 k</span>
+                                    </div>
+
+                                </li>
+                                <li class="col text-center py-1 py-lg-3 border-end border-dark">
+                                    <div class="list-border-light position-relative">
+                                        <p>底價</p><span class="font-squada fs-3 mt-1 text-nowrap"><i
+                                                class="fab fa-ethereum fs-6 me-sm"></i>1.38
+                                            k</span>
+                                    </div>
+                                </li>
+                                <li class="col text-center py-1 py-lg-3">
+                                    <p>總額</p><span class="font-squada fs-3 mt-1">2.8 k</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="text-end mb-4 mb-lg-6">
+                        <a href="#" class="btn btn-light px-4 py-1 border border-dark hover-light">最新上架<i
+                                class="fas fa-sort ms-1"></i></a>
+                    </div>
+                </section>
+
+                <section class="mb-8">
+                    <div class="row-masonry row row-cols-2 row-cols-xxl-3 gx-4 gy-7" data-masonry='{"percentPosition": true }'>
+                        <div class="col row-item">
+                            <div class="card card-border-bottom">
+                                <div class="p-1 p-lg-4">
+                                    <a href="#" class="card-body position-relative">
+                                        <img src="./assets/images/art20.jpg" alt="art20">
+                                        <div class="card-body-filter position-absolute p-1 p-lg-3">
+                                            <div
+                                                class="card-body-filter-text border border-light p-1 p-lg-3 h-100 d-flex flex-column justify-content-between">
+                                                <div>
+                                                    <h6 class="text-light fw-bold mb-3">3/14情人節外面剛好有兩隻鳥，也在過情人節</h6>
+                                                    <span class="text-light"><i
+                                                            class="fab fa-ethereum me-1"></i>300</span>
+                                                </div>
+                                                <p class="btn-more btn-more-light align-self-end">more</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <h5 class="h6 card-title fw-bold bg-info py-3">這兩隻也太像企鵝了吧</h5>
+                            </div>
+                        </div>
+                        <div class="col row-item">
+                            <div class="card card-border-bottom">
+                                <div class="p-1 p-lg-4">
+                                    <a href="./artwork.html" class="card-body position-relative">
+                                        <img src="./assets/images/art21.jpg" alt="art21">
+                                        <div class="card-body-filter position-absolute p-1 p-lg-3">
+                                            <div
+                                                class="card-body-filter-text border border-light p-1 p-lg-3 h-100 d-flex flex-column justify-content-between">
+                                                <div>
+                                                    <h6 class="text-light fw-bold mb-3">3/14情人節外面剛好有兩隻鳥，也在過情人節</h6>
+                                                    <span class="text-light"><i
+                                                            class="fab fa-ethereum me-1"></i>300</span>
+                                                </div>
+                                                <p class="btn-more btn-more-light align-self-end">more</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <h5 class="h6 card-title fw-bold bg-info py-3">兩情相悅</h5>
+                            </div>
+                        </div>
+                        <div class="col row-item">
+                            <div class="card card-border-bottom">
+                                <div class="p-1 p-lg-4">
+                                    <a href="#" class="card-body position-relative">
+                                        <img src="./assets/images/art22.jpg" alt="art22">
+                                        <div class="card-body-filter position-absolute p-1 p-lg-3">
+                                            <div
+                                                class="card-body-filter-text border border-light p-1 p-lg-3 h-100 d-flex flex-column justify-content-between">
+                                                <div>
+                                                    <h6 class="text-light fw-bold mb-3">3/14情人節外面剛好有兩隻鳥，也在過情人節</h6>
+                                                    <span class="text-light"><i
+                                                            class="fab fa-ethereum me-1"></i>300</span>
+                                                </div>
+                                                <p class="btn-more btn-more-light align-self-end">more</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <h5 class="h6 card-title fw-bold bg-info py-3">群聚的小鳥們</h5>
+                            </div>
+                        </div>
+                        <div class="col row-item">
+                            <div class="card card-border-bottom">
+                                <div class="p-1 p-lg-4">
+                                    <a href="#" class="card-body position-relative">
+                                        <img src="./assets/images/art23.jpg" alt="art23">
+                                        <div class="card-body-filter position-absolute p-1 p-lg-3">
+                                            <div
+                                                class="card-body-filter-text border border-light p-1 p-lg-3 h-100 d-flex flex-column justify-content-between">
+                                                <div>
+                                                    <h6 class="text-light fw-bold mb-3">3/14情人節外面剛好有兩隻鳥，也在過情人節</h6>
+                                                    <span class="text-light"><i
+                                                            class="fab fa-ethereum me-1"></i>300</span>
+                                                </div>
+                                                <p class="btn-more btn-more-light align-self-end">more</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <h5 class="h6 card-title fw-bold bg-info py-3">與你分享的快樂勝過獨自擁有</h5>
+                            </div>
+                        </div>
+                        <div class="col row-item">
+                            <div class="card card-border-bottom">
+                                <div class="p-1 p-lg-4">
+                                    <a href="#" class="card-body position-relative">
+                                        <img src="./assets/images/art24.jpg" alt="art24">
+                                        <div class="card-body-filter position-absolute p-1 p-lg-3">
+                                            <div
+                                                class="card-body-filter-text border border-light p-1 p-lg-3 h-100 d-flex flex-column justify-content-between">
+                                                <div>
+                                                    <h6 class="text-light fw-bold mb-3">3/14情人節外面剛好有兩隻鳥，也在過情人節</h6>
+                                                    <span class="text-light"><i
+                                                            class="fab fa-ethereum me-1"></i>300</span>
+                                                </div>
+                                                <p class="btn-more btn-more-light align-self-end">more</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <h5 class="h6 card-title fw-bold bg-info py-3">會唱metal的鳥</h5>
+                            </div>
+                        </div>
+                        <div class="col row-item">
+                            <div class="card card-border-bottom">
+                                <div class="p-1 p-lg-4">
+                                    <a href="#" class="card-body position-relative">
+                                        <img src="./assets/images/art25.jpg" alt="art25">
+                                        <div class="card-body-filter position-absolute p-1 p-lg-3">
+                                            <div
+                                                class="card-body-filter-text border border-light p-1 p-lg-3 h-100 d-flex flex-column justify-content-between">
+                                                <div>
+                                                    <h6 class="text-light fw-bold mb-3">3/14情人節外面剛好有兩隻鳥，也在過情人節</h6>
+                                                    <span class="text-light"><i
+                                                            class="fab fa-ethereum me-1"></i>300</span>
+                                                </div>
+                                                <p class="btn-more btn-more-light align-self-end">more</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <h5 class="h6 card-title fw-bold bg-info py-3">一大一小兩個恰恰好</h5>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+    <!-- Button trigger modal -->
+    <a href="#" class="btn btn-dark hover-light position-absolute top-50 start-50 translate-middle d-lg-none px-7 py-1 text-nowrap"
+        data-bs-toggle="modal" data-bs-target="#exampleModal">篩選條件<span class="font-squada ms-sm">2</span>
+    </a>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content">
+                <div class="accordion accordion-flush border border-dark" id="accordionFlushExample">
+                    <div class="py-3 border-bottom border-dark border-2 position-relative">
+                        <h4 class="text-center">篩選條件</h4>
+                        <button type="button" class="btn-close position-absolute end-0 top-50 translate-middle" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingOne">
+                            <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseOne" aria-expanded="false"
+                                aria-controls="flush-collapseOne">
+                                網路
+                            </button>
+                        </h2>
+                        <div id="flush-collapseOne" class="accordion-collapse collapse show"
+                            aria-labelledby="flush-headingOne">
+                            <div class="accordion-body pt-0 border-bottom border-info border-2">
+                                <div class="d-flex justify-content-between mb-1">
+                                    <label for="ether" class="form-check-label">以太坊</label>
+                                    <input type="checkbox" class="form-check-input" id="ether">
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <label for="BNB" class="form-check-label">BNB 智能鏈</label>
+                                    <input type="checkbox" class="form-check-input" id="BNB" checked>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingTwo">
+                            <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseTwo" aria-expanded="false"
+                                aria-controls="flush-collapseTwo">
+                                狀態
+                            </button>
+                        </h2>
+                        <div id="flush-collapseTwo" class="accordion-collapse collapse show"
+                            aria-labelledby="flush-headingTwo">
+                            <div class="accordion-body pt-0 border-bottom border-info border-2">
+                                <div class="d-flex justify-content-between mb-1">
+                                    <label for="display" class="form-check-label">僅展示</label>
+                                    <input type="checkbox" class="form-check-input" id="display">
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <label for="onsale" class="form-check-label">拍賣中</label>
+                                    <input type="checkbox" class="form-check-input" id="onsale" checked>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingThree">
+                            <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseThree" aria-expanded="false"
+                                aria-controls="flush-collapseThree">
+                                價格
+                            </button>
+                        </h2>
+                        <div id="flush-collapseThree" class="accordion-collapse collapse show"
+                            aria-labelledby="flush-headingThree">
+                            <div
+                                class="accordion-body pt-0 border-bottom border-info border-2 d-flex align-items-center">
+                                <select class="form-select w-28 p-1 me-1" aria-label="select">
+                                    <option selected>ETH</option>
+                                    <option value="BTC">BTC</option>
+                                    <option value="DOGE">DOGE</option>
+                                </select>
+                                <input type="text" id="lowPrice" class="form-control w-28">
+                                <span class="mx-1">－</span>
+                                <input type="text" id="highPrice" class="form-control w-28">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <p class="fw-bold text-success p-4">屬性</p>
+                        <h2 class="accordion-header" id="flush-headingFour">
+                            <button class="accordion-button collapsed fw-bold pt-0" type="button"
+                                data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false"
+                                aria-controls="flush-collapseFour">
+                                品種
+                            </button>
+                        </h2>
+                        <div id="flush-collapseFour" class="accordion-collapse collapse show"
+                            aria-labelledby="flush-headingFour">
+                            <div class="accordion-body pt-0 pb-0">
+                                <div class="d-flex justify-content-between mb-1">
+                                    <label for="八哥" class="form-check-label">八哥</label>
+                                    <input type="checkbox" class="form-check-input" id="八哥">
+                                </div>
+                                <div class="d-flex justify-content-between mb-1">
+                                    <label for="虎皮鸚鵡" class="form-check-label">虎皮鸚鵡</label>
+                                    <input type="checkbox" class="form-check-input" id="虎皮鸚鵡" checked>
+                                </div>
+                                <div class="d-flex justify-content-between mb-1">
+                                    <label for="太平鳥" class="form-check-label">太平鳥</label>
+                                    <input type="checkbox" class="form-check-input" id="太平鳥">
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <label for="畫眉鳥" class="form-check-label">畫眉鳥</label>
+                                    <input type="checkbox" class="form-check-input" id="畫眉鳥">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" class="btn btn-primary w-100 py-2 text-light border border-dark border-start-0 border-end-0">確認</a>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingFive">
+                            <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseFive" aria-expanded="false"
+                                aria-controls="flush-collapseFive">
+                                鳥的數量
+                            </button>
+                        </h2>
+                        <div id="flush-collapseFive" class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body pt-0">
+                                <select class="form-select" aria-label="select">
+                                    <option selected>1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingSix">
+                            <button class="accordion-button collapsed fw-bold pt-0" type="button"
+                                data-bs-toggle="collapse" data-bs-target="#flush-collapseSix" aria-expanded="false"
+                                aria-controls="flush-collapseSix">
+                                是否有花草
+                            </button>
+                        </h2>
+                        <div id="flush-collapseSix" class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingSix" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body pt-0">
+                                <div class="d-flex justify-content-between mb-1">
+                                    <label for="isFlowerTrue" class="form-check-label">是</label>
+                                    <input type="checkbox" class="form-check-input" id="isFlowerTrue">
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <label for="isFlowerFalse" class="form-check-label">否</label>
+                                    <input type="checkbox" class="form-check-input" id="isFlowerFalse">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingSeven">
+                            <button class="accordion-button collapsed fw-bold pt-0" type="button"
+                                data-bs-toggle="collapse" data-bs-target="#flush-collapseSeven" aria-expanded="false"
+                                aria-controls="flush-collapseSeven">
+                                鳥的顏色
+                            </button>
+                        </h2>
+                        <div id="flush-collapseSeven" class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingSeven" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body pt-0">
+                                <select class="form-select" aria-label="select">
+                                    <option selected>白色</option>
+                                    <option value="black">黑色</option>
+                                    <option value="blue">藍色</option>
+                                    <option value="green">綠色</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

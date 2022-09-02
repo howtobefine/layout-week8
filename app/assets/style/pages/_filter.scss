@@ -1,0 +1,21 @@
+.h-32 {
+    height: 32px;
+}
+
+.w-28 {
+    width: 28%;
+
+    @media(max-width:1400px) {
+        width: 100%;
+    }
+}
+
+.list-border-light::after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 2px;
+    background-color: $light;
+    right: -14px;
+    top: 0;
+}

@@ -1,0 +1,19 @@
+.value-thead {
+    display: none;
+
+    @media(min-width:992px) {
+        display: table-header-group;
+    }
+}
+
+.value-td {
+    display: none;
+
+    @media(min-width:992px) {
+        display: table-cell;
+    }
+}
+
+.tbody tr:first-child {
+    background-color: black;
+}

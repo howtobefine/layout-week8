@@ -7,10 +7,15 @@
 @import "./mixin";
 @import "./components/button";
 @import "./components/card";
+@import "./components/hover";
 
 @import "./vendors/swiper";
 
 @import "./layout/header";
 @import "./layout/footer";
 
-@import "./pages/index"
+@import "./pages/index";
+@import "./pages/intro";
+@import "./pages/filter";
+@import "./pages/artwork";
+@import "./pages/value";

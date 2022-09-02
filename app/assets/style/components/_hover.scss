@@ -1,0 +1,16 @@
+.hover-primary {
+    transition: all .15s ease-in-out;
+
+    &:hover {
+        color: $primary;
+    }
+}
+
+.hover-light {
+    transition: all .15s ease-in-out;
+
+    &:hover {
+        background-color: $primary;
+        color: $light;
+    }
+}

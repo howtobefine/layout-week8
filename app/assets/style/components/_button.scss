@@ -38,3 +38,45 @@
         color: $light;
     }
 }
+
+.btn-plus {
+    width: 0;
+    height: 0;
+    padding: 0;
+    border-style: solid;
+    border-width: 0 0 32px 32px;
+    border-color: transparent transparent #000000 transparent;
+
+    &:focus {
+        box-shadow: none;
+    }
+
+    &::before {
+        content: '+';
+        position: absolute;
+        color: $light;
+        width: 10px;
+        height: 10px;
+        bottom: -20px;
+        right: 4px;
+    }
+
+    &.active {
+        width: 0;
+        height: 0;
+        padding: 0;
+        border-style: solid;
+        border-width: 0 0 32px 32px;
+        border-color: transparent transparent $primary transparent;
+
+        &::before {
+            content: '–';
+            position: absolute;
+            color: $light;
+            width: 10px;
+            height: 10px;
+            bottom: -20px;
+            right: 4px;
+        }
+    }
+}
